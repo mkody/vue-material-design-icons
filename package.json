@@ -37,7 +37,7 @@
     "jest-junit": "^12.0.0",
     "jest-serializer-vue": "2.0.2",
     "mustache": "^4.2.0",
-    "p-map": "^4.0.0",
+    "p-map": "^5.0.0",
     "prettier": "^2.2.1",
     "regenerator-runtime": "^0.13.5",
     "vue": "^2.6.12",
@@ -50,9 +50,12 @@
   },
   "scripts": {
     "prebuild": "rm -rf dist/",
-    "build": "./build.js",
+    "build": "node ./build.mjs",
     "postbuild": "cp styles.css package.json README.md dist/",
     "format": "prettier --write **/*.{js,vue}",
     "test": "jest"
+  },
+  "engines": {    
+    "node": ">=12"
   }
 }
