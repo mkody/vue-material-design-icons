@@ -50,9 +50,12 @@
   },
   "scripts": {
     "prebuild": "rm -rf dist/",
-    "build": "./build.js",
+    "build": "node ./build.mjs",
     "postbuild": "cp styles.css package.json README.md dist/",
     "format": "prettier --write **/*.{js,vue}",
     "test": "jest"
+  },
+  "engines": {    
+    "node": ">=12"
   }
 }
