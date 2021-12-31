@@ -28,7 +28,7 @@
     "material design"
   ],
   "devDependencies": {
-    "@babel/core": "^7.16.5",
+    "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.5",
     "@mdi/js": "6.5.95",
     "@vue/test-utils": "1.3.0",
