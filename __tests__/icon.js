@@ -5,12 +5,7 @@ const WrappedIcon = {
   components: {
     AndroidIcon,
   },
-  render(h) {
-    return h(AndroidIcon, {
-      attrs: this.$attrs,
-      listeners: this.$listeners,
-    });
-  },
+  template: `<AndroidIcon />`,
 };
 
 describe('Icon', () => {
@@ -29,11 +24,11 @@ describe('Icon', () => {
   });
 
   it('accepts a "decorative" property', async () => {
-    expect(icon.attributes()['aria-hidden']).toBeFalsy();
+    expect(icon.attributes()['aria-hidden']).toEqual('false');
 
     await icon.setProps({ decorative: true });
 
-    expect(icon.attributes()['aria-hidden']).toBeTruthy();
+    expect(icon.attributes()['aria-hidden']).toEqual('true');
   });
 
   it('accepts a "fillColor" property', async () => {
@@ -47,10 +42,9 @@ describe('Icon', () => {
   });
 
   it('renders an icon', () => {
-    expect(icon).toMatchSnapshot();
+    expect(icon.wrapperElement).toMatchSnapshot();
   });
 
-  /* @FIXME
   it('listens to a click event', async () => {
     const clickListener = jest.fn();
     const iconWithEvent = mount({
@@ -69,5 +63,4 @@ describe('Icon', () => {
     await iconWithEvent.trigger('click');
     expect(clickListener).toBeCalled();
   });
-  */
 });

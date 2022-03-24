@@ -2,8 +2,8 @@ module.exports = {
   verbose: true,
   moduleFileExtensions: ['js', 'vue'],
   transform: {
-    '^.+\\.vue$': 'vue-jest',
-    '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
+    '^.+\\.js$': 'babel-jest',
+    '^.+\\.vue$': '@vue/vue3-jest',
   },
   snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
   reporters: [
