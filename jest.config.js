@@ -3,9 +3,9 @@ module.exports = {
   moduleFileExtensions: ['js', 'vue'],
   transform: {
     '^.+\\.vue$': '@vue/vue3-jest',
-    '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
+    '^.+\\.js$': 'babel-jest',
   },
-  snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
+  snapshotSerializers: ['jest-serializer-vue'],
   reporters: [
     'default',
     ['jest-junit', { outputDirectory: '<rootDir>/reports/jest' }],

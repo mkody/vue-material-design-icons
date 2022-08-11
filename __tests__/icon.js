@@ -1,18 +1,24 @@
-import { mount } from '@vue/test-utils';
-import AndroidIcon from '../dist/Android';
+import { createApp, h } from 'vue'
+import AndroidIcon from '../dist/Android.vue';
 
-const WrappedIcon = {
-  components: {
-    AndroidIcon,
-  },
-  template: `<AndroidIcon />`,
-};
+function mount(Component, props, slots) {
+  document.getElementsByTagName('html')[0].innerHTML = '';
+  const el = document.createElement('div');
+  el.id = 'app';
+  document.body.appendChild(el);
+  const Parent = {
+    render () {
+      return h(Component, props, slots)
+    }
+  }
+  createApp(Parent).mount(el)
+}
 
 describe('Icon', () => {
   let icon;
 
   beforeEach(() => {
-    icon = mount(WrappedIcon);
+    icon = mount(AndroidIcon);
   });
 
   it('accepts a "title" property', async () => {
