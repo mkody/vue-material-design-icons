@@ -21,19 +21,11 @@ describe('Icon', () => {
   });
 
   it('accepts a "title" property', async () => {
-    expect(icon.attributes()['aria-label']).toEqual('Android icon');
+    expect(icon.attributes()['aria-label']).toBeUndefined();
 
     await icon.setProps({ title: 'foo' });
 
     expect(icon.attributes()['aria-label']).toEqual('foo');
-  });
-
-  it('accepts a "decorative" property', async () => {
-    expect(icon.attributes()['aria-hidden']).toBeFalsy();
-
-    await icon.setProps({ decorative: true });
-
-    expect(icon.attributes()['aria-hidden']).toBeTruthy();
   });
 
   it('accepts a "fillColor" property', async () => {
@@ -50,7 +42,6 @@ describe('Icon', () => {
     expect(icon).toMatchSnapshot();
   });
 
-  /* @FIXME
   it('listens to a click event', async () => {
     const clickListener = jest.fn();
     const iconWithEvent = mount({
@@ -69,5 +60,4 @@ describe('Icon', () => {
     await iconWithEvent.trigger('click');
     expect(clickListener).toBeCalled();
   });
-  */
 });
