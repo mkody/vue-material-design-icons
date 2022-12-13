@@ -1,5 +1,6 @@
 module.exports = {
   verbose: true,
+  testEnvironment: 'jsdom',
   moduleFileExtensions: ['js', 'vue'],
   transform: {
     '^.+\\.vue$': 'vue-jest',
@@ -10,5 +11,4 @@ module.exports = {
     'default',
     ['jest-junit', { outputDirectory: '<rootDir>/reports/jest' }],
   ],
-  testEnvironment: 'jsdom',
 };
