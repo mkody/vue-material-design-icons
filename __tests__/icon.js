@@ -1,18 +1,5 @@
-import { createApp, h } from 'vue'
+import { mount } from '@vue/test-utils';
 import AndroidIcon from '../dist/Android.vue';
-
-function mount(Component, props, slots) {
-  document.getElementsByTagName('html')[0].innerHTML = '';
-  const el = document.createElement('div');
-  el.id = 'app';
-  document.body.appendChild(el);
-  const Parent = {
-    render () {
-      return h(Component, props, slots)
-    }
-  }
-  createApp(Parent).mount(el)
-}
 
 describe('Icon', () => {
   let icon;

@@ -11,4 +11,7 @@ module.exports = {
     'default',
     ['jest-junit', { outputDirectory: '<rootDir>/reports/jest' }],
   ],
+  testEnvironmentOptions: {
+    customExportConditions: ['node', 'node-addons'],
+ },
 };
