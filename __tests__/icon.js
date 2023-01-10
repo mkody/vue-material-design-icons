@@ -22,19 +22,11 @@ describe('Icon', () => {
   });
 
   it('accepts a "title" property', async () => {
-    expect(icon.attributes()['aria-label']).toEqual('Android icon');
+    expect(icon.attributes()['aria-label']).toBeUndefined();
 
     await icon.setProps({ title: 'foo' });
 
     expect(icon.attributes()['aria-label']).toEqual('foo');
-  });
-
-  it('accepts a "decorative" property', async () => {
-    expect(icon.attributes()['aria-hidden']).toEqual('false');
-
-    await icon.setProps({ decorative: true });
-
-    expect(icon.attributes()['aria-hidden']).toEqual('true');
   });
 
   it('accepts a "fillColor" property', async () => {
