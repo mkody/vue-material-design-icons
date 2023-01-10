@@ -1,5 +1,8 @@
 name: CI
-on: [push, pull_request]
+on:
+  push:
+    branches: [ dev, bump-deps ]
+  pull_request:
 jobs:
   build:
     name: Test
