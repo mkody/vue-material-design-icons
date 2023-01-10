@@ -3,12 +3,15 @@ module.exports = {
   testEnvironment: 'jsdom',
   moduleFileExtensions: ['js', 'vue'],
   transform: {
-    '^.+\\.vue$': 'vue-jest',
-    '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
+    '^.+\\.vue$': '@vue/vue3-jest',
+    '^.+\\.js$': 'babel-jest',
   },
-  snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
+  snapshotSerializers: ['jest-serializer-vue'],
   reporters: [
     'default',
     ['jest-junit', { outputDirectory: '<rootDir>/reports/jest' }],
   ],
+  testEnvironmentOptions: {
+    customExportConditions: ['node', 'node-addons'],
+ },
 };
