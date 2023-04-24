@@ -1,23 +1,11 @@
 import { mount } from '@vue/test-utils';
-import AndroidIcon from '../dist/Android';
-
-const WrappedIcon = {
-  components: {
-    AndroidIcon,
-  },
-  render(h) {
-    return h(AndroidIcon, {
-      attrs: this.$attrs,
-      listeners: this.$listeners,
-    });
-  },
-};
+import AndroidIcon from '../dist/Android.vue';
 
 describe('Icon', () => {
   let icon;
 
   beforeEach(() => {
-    icon = mount(WrappedIcon);
+    icon = mount(AndroidIcon);
   });
 
   it('accepts a "title" property', async () => {
@@ -39,7 +27,7 @@ describe('Icon', () => {
   });
 
   it('renders an icon', () => {
-    expect(icon).toMatchSnapshot();
+    expect(icon.wrapperElement).toMatchSnapshot();
   });
 
   it('listens to a click event', async () => {
