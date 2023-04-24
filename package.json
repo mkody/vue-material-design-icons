@@ -1,6 +1,6 @@
 {
   "name": "@mkody/vue-material-design-icons",
-  "version": "5.0.7",
+  "version": "5.0.8",
   "author": "Rob Cresswell <robcresswell@pm.me>",
   "contributors": [
     {
@@ -32,7 +32,7 @@
     "@babel/preset-env": "^7.21.4",
     "@mdi/js": "7.2.96",
     "@types/node": "^18.16.0",
-    "@vue/test-utils": "^2.2.7",
+    "@vue/test-utils": "^2.3.2",
     "@vue/vue3-jest": "^29.2.3",
     "copyfiles": "^2.4.1",
     "jest": "^29.5.0",
