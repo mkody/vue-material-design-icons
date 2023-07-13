@@ -29,7 +29,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.22.8",
-    "@babel/preset-env": "^7.22.7",
+    "@babel/preset-env": "^7.22.9",
     "@mdi/js": "7.2.96",
     "@types/node": "^18.16.19",
     "@vue/test-utils": "^2.4.0",
