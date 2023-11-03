@@ -11,6 +11,12 @@ easier.
 1. Install the package
 
    ```console
+   pnpm install @mkody/vue-material-design-icons
+   ```
+
+   **OR**
+
+   ```console
    yarn add @mkody/vue-material-design-icons
    ```
 

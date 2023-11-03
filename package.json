@@ -51,6 +51,7 @@
     "url": "https://github.com/mkody/vue-material-design-icons/issues"
   },
   "scripts": {
+    "all": "pnpm format && pnpm build && pnpm test",
     "prebuild": "rimraf dist/",
     "build": "ts-node --esm ./build.ts",
     "postbuild": "copyfiles styles.css package.json README.md dist/",
@@ -59,6 +60,8 @@
   },
   "type": "module",
   "engines": {
-    "node": ">=16"
-  }
+    "node": ">=16",
+    "pnpm": ">=8"
+  },
+  "packageManager": "pnpm@8.10.2"
 }

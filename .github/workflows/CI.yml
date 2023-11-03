@@ -1,17 +1,29 @@
 name: CI
+
 on:
   push:
     branches: [ dev, bump-deps ]
   pull_request:
+
 jobs:
-  build:
+  test:
     name: Test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 8
+
     - uses: actions/setup-node@v3
       with:
         node-version-file: '.nvmrc'
-    - run: yarn install --frozen-lockfile
-    - run: yarn build
-    - run: yarn test
+        registry-url: 'https://registry.npmjs.org'
+        cache: 'pnpm'
+
+    - run: pnpm install
+
+    - run: pnpm build
+
+    - run: pnpm test
