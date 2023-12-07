@@ -28,7 +28,6 @@
     "material design"
   ],
   "devDependencies": {
-    "@babel/core": "^7.23.5",
     "@babel/preset-env": "^7.23.5",
     "@mdi/js": "7.3.67",
     "@types/node": "^20.10.4",
