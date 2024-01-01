@@ -11,6 +11,12 @@ easier.
 1. Install the package
 
    ```console
+   pnpm install @mkody/vue-material-design-icons
+   ```
+
+   **OR**
+
+   ```console
    yarn add @mkody/vue-material-design-icons
    ```
 
@@ -98,7 +104,7 @@ A list of the icons can be found at the
 versions of the names displayed on the website, to match the
 [Vue Style Guide](https://vuejs.org/v2/style-guide/). For example, the icon
 named `ultra-high-definition` would be imported as
-`"vue-material-design-icons/UltraHighDefinition.vue"`.
+`"@mkody/vue-material-design-icons/UltraHighDefinition.vue"`.
 
 ## Tips
 
@@ -117,7 +123,7 @@ named `ultra-high-definition` would be imported as
 
   This will give you much shorter and more readable imports, like
   `import Android from "icons/Android"`, rather than
-  `import Android from "vue-material-design-icons/Android.vue"`. Much better!
+  `import Android from "@mkody/vue-material-design-icons/Android.vue"`. Much better!
 
 - If you want custom sizing, add your own css to adjust the height and width of the icons
 
