@@ -43,7 +43,7 @@
     "rimraf": "^5.0.5",
     "tsx": "^4.7.2",
     "typescript": "^5.4.5",
-    "vue": "^3.4.21"
+    "vue": "^3.4.23"
   },
   "homepage": "https://github.com/mkody/vue-material-design-icons",
   "bugs": {
