@@ -28,7 +28,7 @@
     "material design"
   ],
   "devDependencies": {
-    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-env": "^7.25.7",
     "@mdi/js": "7.4.47",
     "@types/node": "^22.7.4",
     "@vue/test-utils": "^2.4.6",
@@ -43,7 +43,7 @@
     "rimraf": "^6.0.1",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2",
-    "vue": "^3.5.10"
+    "vue": "^3.5.11"
   },
   "homepage": "https://github.com/mkody/vue-material-design-icons",
   "bugs": {
