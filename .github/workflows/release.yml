@@ -12,25 +12,23 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
-  
-      - uses: pnpm/action-setup@v2
+
+      - uses: pnpm/action-setup@v4
         with:
-          version: 8
-  
-      - uses: actions/setup-node@v3
+          run_install: false
+
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
           cache: 'pnpm'
 
-      - run: npm install -g npm
-  
       - run: pnpm install
   
       - run: pnpm build
   
       - run: pnpm test
 
-      - run: cd dist/ && npm publish --provenance --access public
+      - run: cd dist/ && pnpm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
