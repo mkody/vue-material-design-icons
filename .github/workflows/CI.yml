@@ -7,23 +7,27 @@ on:
 
 jobs:
   test:
-    name: Test
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v5
 
-    - uses: pnpm/action-setup@v4
-      with:
-        run_install: false
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
 
-    - uses: actions/setup-node@v4
-      with:
-        node-version-file: '.nvmrc'
-        registry-url: 'https://registry.npmjs.org'
-        cache: 'pnpm'
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'pnpm'
 
-    - run: pnpm install
+      - name: Install dependencies
+        run: pnpm install
 
-    - run: pnpm build
+      - name: Build
+        run: pnpm build
 
-    - run: pnpm test
+      - name: Run tests
+        run: pnpm test
