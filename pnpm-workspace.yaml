@@ -1,5 +1,7 @@
-enablePrePostScripts: true
-
 allowBuilds:
   esbuild: true
   unrs-resolver: true
+
+enablePrePostScripts: true
+minimumReleaseAge: 4320
+minimumReleaseAgeStrict: true
